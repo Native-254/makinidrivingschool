@@ -1675,8 +1675,7 @@
                 activeBranchId = id;
                 const branch = branches.find(b => b.id === id);
                 if (branch) {
-                    mapIframe.src =
-                        `https://www.google.com/maps/embed?q=${branch.query}&output=embed&z=15&maptype=roadmap`;
+                    mapIframe.src = `https://www.google.com/maps/embed?q=${branch.query}&output=embed&z=15&maptype=roadmap&key=AIzaSyA0H2HoftPolnrRGWXxFV27DGVK9AGRjBs`;
                 }
                 // Update active states
                 document.querySelectorAll('.branch-card').forEach(c => {
