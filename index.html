@@ -68,6 +68,10 @@
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
         /* SKIP LINK */
         .skip-link {
@@ -801,7 +805,7 @@
             border-radius: 12px;
         }
         #usp-heading.section-title {
-            margin: 0 We go beyond just teaching — we prepare you for real-world driving and career success.0 8px 0;
+            margin: 0 0 8px 0;
             color: #1b1a1a;
         }
         p.section-subtitle {
@@ -1586,9 +1590,73 @@
             opacity: 0.55;
             pointer-events: none;
         }
+        @media (max-width: 1120px) {
+            .header-inner {
+                gap: 12px;
+                padding: 0 18px;
+            }
+            .main-nav {
+                gap: 4px;
+            }
+            .main-nav a {
+                font-size: 0.82rem;
+                padding: 7px 10px;
+            }
+            .nav-cta {
+                padding: 9px 14px !important;
+            }
+            .logo-text {
+                font-size: 1.34rem;
+            }
+        }
         @media (max-width: 900px) {
+            .main-nav {
+                display: none;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .site-header {
+                min-height: 68px;
+                height: auto;
+            }
+            .header-inner {
+                padding: 10px 16px;
+            }
+            .logo-wrap {
+                min-width: 0;
+            }
+            .logo-sub {
+                white-space: normal;
+            }
+            .hero {
+                padding: 28px 18px 48px;
+            }
+            .hero-inner {
+                gap: 28px;
+            }
+            .dual-strip {
+                margin-top: -12px;
+            }
+            .comp-content-wrapper,
+            .wtw-content-wrapper {
+                flex-direction: column;
+            }
+            .comp-hero,
+            .why-train-hero {
+                width: 100%;
+            }
+            .comp-hero img,
+            .why-train-hero img {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+            }
             #computer .comp-grid {
                 flex-direction: column;
+            }
+            .course-card {
+                flex: 1 1 auto;
             }
             .course-card.expanded {
                 flex: 1 1 auto;
@@ -1596,10 +1664,96 @@
             .comp-grid.has-expanded .course-card:not(.expanded) {
                 filter: blur(1px);
             }
+            .course-card-media {
+                min-height: 150px;
+            }
+            .course-card-details ul {
+                grid-template-columns: 1fr 1fr;
+            }
+            .pricing-table {
+                min-width: 720px;
+            }
+            .floating-wa {
+                width: 52px;
+                height: 52px;
+                right: 18px;
+                bottom: 18px;
+            }
         }
         @media (max-width: 560px) {
-            .cart-panel {
+            .section {
+                padding: 32px 14px;
+            }
+            .header-inner {
+                gap: 10px;
+                padding: 9px 12px;
+            }
+            .logo-icon {
+                width: 38px;
+                height: 38px;
+            }
+            .logo-text {
+                font-size: 1.08rem;
+            }
+            .logo-sub {
+                font-size: 0.56rem;
+                line-height: 1.08;
+                max-width: 146px;
+            }
+            .cart-icon-btn,
+            .menu-toggle {
+                width: 38px;
+                height: 38px;
+            }
+            .cart-icon-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+            .mobile-nav-panel {
+                width: min(300px, 88vw);
+                padding: 86px 18px 32px;
+            }
+            .hero {
+                padding: 22px 14px 40px;
+            }
+            .hero h1 {
+                font-size: clamp(1.8rem, 12vw, 2.45rem);
+            }
+            .hero-desc {
+                font-size: 1rem;
+            }
+            .hero-btns,
+            .cta-banner > div {
+                align-items: stretch;
+                flex-direction: column;
+            }
+            .hero-btns .btn,
+            .cta-banner .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .dual-strip {
+                padding: 0 14px;
+                gap: 14px;
+            }
+            .dual-card {
                 padding: 18px;
+            }
+            .comp-offer-card {
+                align-items: stretch;
+                text-align: left;
+            }
+            .comp-offer-card .offer-price {
+                font-size: 1.75rem;
+            }
+            .comp-offer-card .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .cart-panel {
+                width: 100vw;
+                height: 100dvh;
+                padding: 18px 16px max(18px, env(safe-area-inset-bottom));
             }
             .course-card-details ul {
                 grid-template-columns: 1fr;
@@ -1613,6 +1767,72 @@
             }
             .card-btn {
                 flex: 1;
+            }
+            .course-card-body {
+                padding: 16px;
+            }
+            .course-card-media {
+                min-height: 138px;
+                padding: 16px;
+            }
+            .course-card h3 {
+                font-size: 1.34rem;
+            }
+            .pricing-table {
+                min-width: 660px;
+                font-size: 0.76rem;
+            }
+            .pricing-table thead th,
+            .pricing-table tbody td {
+                padding: 9px 10px;
+            }
+            .table-cart-btn {
+                padding: 8px 10px;
+                font-size: 0.72rem;
+            }
+            .branch-card,
+            .payment-card,
+            .usp-card {
+                padding: 15px;
+            }
+            .map-container {
+                min-height: 240px;
+            }
+            .cta-banner {
+                border-radius: var(--radius-lg);
+                padding: 34px 18px;
+            }
+            .floating-wa {
+                width: 48px;
+                height: 48px;
+                right: 14px;
+                bottom: 14px;
+            }
+            .floating-wa .wa-tooltip {
+                display: none;
+            }
+        }
+        @media (max-width: 380px) {
+            .section {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .logo-sub {
+                max-width: 118px;
+            }
+            .cart-icon-btn,
+            .menu-toggle {
+                width: 36px;
+                height: 36px;
+            }
+            .course-action-group {
+                flex-direction: column;
+            }
+            .card-btn {
+                width: 100%;
+            }
+            .payment-select label {
+                align-items: flex-start;
             }
         }
         @media print {
